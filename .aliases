@@ -1,0 +1,14 @@
+# Tmux aliases
+alias mytmux='~/bin/start_tmux'
+alias tmuxkill='tmux kill-session -t '
+
+#Custom Commands
+alias ll='ls -la '
+alias lt='ls -ltr '
+alias vi='vim'
+alias rm='rm -i'
+alias grepr='find . -type f -not -path '\''*.svn*'\'' | sed -e '\''s/^/"/'\'' | sed -e '\''s/$/"/'\'' | xargs grep --color=auto -ns'
+
+#Git Aliases
+alias gs='git status -s'
+alias gitdiff='git difftool'
