@@ -4,7 +4,7 @@ scriptencoding utf-8
 set encoding=utf-8
 
 " set jj keystroke as escape from insert mode
-inoremap jj <ESC>
+"inoremap jj <ESC>
 
 " Indentation settings
 " automatically indent lines (default)
@@ -345,24 +345,18 @@ endif
 
 " lightline configs
 let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'filename' ] ]
+      \ 'colorscheme': 'wombat',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"⭤":""}',
       \ },
-      \ 'component_function': {
-      \   'fugitive': 'MyFugitive',
-      \   'readonly': 'MyReadonly',
-      \   'modified': 'MyModified',
-      \   'filename': 'MyFilename'
-      \ },
-      \ 'separator': { 'left': "", 'right': "" },
-      \ 'subseparator': { 'left': '>', 'right': '<' }
-    \ } 
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ }
 
 let g:tmuxline_separators = {
-  \ 'left': '',
+  \ 'left': '⮀',
   \ 'left_alt': '>',
-  \ 'right': '',
+  \ 'right': '⮂',
   \ 'right_alt': '<',
   \ 'space': ' '}
 
