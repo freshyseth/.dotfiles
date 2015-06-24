@@ -7,9 +7,13 @@
 
 Install pathogen:
 
-`mkdir -p ~/.vim/autoload ~/.vim/bundle && \`
-`curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim`
+```bash
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+```
 
 Once pathogen is installed you can install lightline:
 
-`git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim`
+```
+git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
+```
