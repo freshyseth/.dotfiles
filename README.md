@@ -1,7 +1,6 @@
 .dotfiles
 =========
-
-# .dotfiles for recreating my environment
+.dotfiles for recreating my environment
 
 ## VIM
 .vimrc has a dependency on the pathogen plugin manager from https://github.com/tpope/vim-pathogen
