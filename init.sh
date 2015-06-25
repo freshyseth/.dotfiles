@@ -33,7 +33,8 @@ if [ -f ~/.zshrc ]; then
   sed -i '' 's/plugins=(git)/plugins=(git gitfast git-extras git-flow-avh)/' ~/.zshrc
   
   echo "Add custom aliases"
-  echo ". ~/.dotfiles/.aliases" >> ~/.zshrc
+  cp ~/.dotfiles/.aliases ~/
+  echo ". ~/.aliases" >> ~/.zshrc
 else
   echo "There is no ~/.zshrc. Make sure .oh-my-zsh was successfully installed."
 fi
