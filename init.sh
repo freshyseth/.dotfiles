@@ -4,18 +4,20 @@
 
 echo ".dotfiles to the rescue! Let's roll!"
 
-#### Constants
-# From http://ohmyz.sh/
-OH_MY_ZSH_CURL="https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh"
-OH_MY_ZSH_WGET="https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh"
-
 # Install .oh-my-zsh
-echo "Install .oh-my-zsh"
-if [ -e ~/.oh-my-zsh ]; then
+echo "Checking for zsh and .oh-my-zsh"
+zsh=$(< /etc/shells grep zsh)
+if [[ $zsh != *"zsh"* ]]; then
+  echo "Unfortunately, zsh is not an available shell on this system. Sorry!"
+elif [ -e ~/.oh-my-zsh ]; then 
   echo "You've already got .oh-my-zsh installed! Great job."
 else
-  curl -L $OH_MY_ZSH_CURL | sh || wget $OH_MY_ZSH_WGET  -O - | sh
+  #### Constants
+  # From http://ohmyz.sh/
+  OH_MY_ZSH_CURL="https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh"
+  OH_MY_ZSH_WGET="https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh"
 
+  curl -L $OH_MY_ZSH_CURL | sh || wget $OH_MY_ZSH_WGET  -O - | sh
 fi
 
 # Configure .oh-my-zsh 
