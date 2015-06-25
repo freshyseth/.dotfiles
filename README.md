@@ -2,18 +2,15 @@
 =========
 .dotfiles for recreating my environment
 
-## VIM
-.vimrc has a dependency on the pathogen plugin manager from https://github.com/tpope/vim-pathogen
-
-Install pathogen:
-
-```bash
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+Clone this repo into your user root (init.sh expects this to be the repo path).
 ```
-
-Once pathogen is installed you can install lightline:
-
+git clone https://github.com/freshyseth/.dotfiles.git .dotfiles
 ```
-git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
+Run the `init.sh` script.
 ```
+~/.dotfiles/init.sh
+```
+You'll likely need to type your password since you're changing your shell to zsh.
+The shell will not reflect the change since everything is done in the scripts subshell.
+You'll have to logout/login to reflect the changes.
+The install does not install patched fonts which are required for the shell prompt and the vim lightline plugin.
