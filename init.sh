@@ -51,8 +51,14 @@ git config --global user.email "freshyseth@gmail.com"
 echo "Set git alias.stashed"
 git config --global alias.stashed "stash list --pretty=format:'%gd: %Cred%h%Creset %Cgreen[%ar]%Creset %s'"
 
-#Install powerline for vim
-pip install powerline-status
+# Configure vim
+# install pathogen vim plugin manager
+echo "Installing pathogen vim plugin manager"
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# copy .vimrc to user root
+cp ~/.dotfiles/.vimrc ~/
 
 # Complete
 echo "Fin!"
