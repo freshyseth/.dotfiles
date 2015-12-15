@@ -1,6 +1,27 @@
-#Custom Commands
+# Custom Commands
 alias ll='ls -la '
 alias lt='ls -ltr '
 alias vi='vim'
 alias rm='rm -i'
 alias grepr='find . -type f -not -path '\''*.svn*'\'' | sed -e '\''s/^/"/'\'' | sed -e '\''s/$/"/'\'' | xargs grep --color=auto -ns'
+alias aliasg='alias | grep '
+alias fuck='sudo $(fc -ln -1)'
+
+# Git Commands
+alias gai='git add --interactive'
+alias gta='git tag -a'
+
+# Git Flow Commands
+alias gf='git flow'
+alias gff='git flow feature'
+alias gfr='git flow release'
+
+# Laravel Homestead Commands
+alias vmedit='vi ~/.homestead/Homestead.yaml'
+alias vmstat='homestead status'
+alias vmstatus='vmstat'
+alias vmup='homestead up && vmstat'
+alias vmdown='homestead suspend && vmstat'
+alias vmkill='homestead halt && vmstat'
+alias vmssh='homestead ssh'
+alias vmrefresh='homestead provision'
