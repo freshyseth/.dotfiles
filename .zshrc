@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/sethwebster/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -50,7 +50,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitfast git-extras git-flow-avh git-flow-completion)
+plugins=(git gitfast git-extras)
 
 # User configuration
 
@@ -59,7 +59,7 @@ plugins=(git gitfast git-extras git-flow-avh git-flow-completion)
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -82,9 +82,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-DEFAULT_USER=sethwebster
+DEFAULT_USER=websters
 . ~/.aliases
 PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/.composer/vendor/bin
-
-# Homebrew Github Token (for higher rate limit on authenticated requests)
-export HOMEBREW_GITHUB_API_TOKEN=55400b6eb93cc5da016c5e35e77f260a41761710
